@@ -9,7 +9,7 @@ The FlagbitCurrencyBundle provides basic functions to display currency symbols a
 You can set your default currency:
 
 ```yaml
-fagbit_currency:
+flagbit_currency:
     default_currency: CHF
 ```
 
