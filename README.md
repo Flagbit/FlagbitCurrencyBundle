@@ -1,4 +1,4 @@
-# FlagbitCurrencyBundle
+# FlagbitCurrencyBundle [![Build Status](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle.svg?branch=master)](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle)
 
 ## About
 
