@@ -33,7 +33,7 @@ Fetch the symbol for the default currency or a given currency.
 
 ```php
 $container->get('flagbit_currency')->getCurrencySymbol(); // €
-$container->get('flagbit_currency')->getCurrencySymbol('EUR); // €
+$container->get('flagbit_currency')->getCurrencySymbol('EUR'); // €
 $container->get('flagbit_currency')->getCurrencySymbol('USD'); // $
 ```
 
