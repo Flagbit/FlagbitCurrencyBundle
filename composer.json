@@ -2,6 +2,10 @@
     "name": "flagbit/currency-bundle",
     "description": "FlagbitCurrencyBundle for the Symfony Framework",
     "type": "symfony-bundle",
+    "keywords": [
+        "currency"
+    ],
+    "homepage": "https://github.com/Flagbit/FlagbitCurrencyBundle",
     "license": "BSD-3-Clause",
     "authors": [
         {
