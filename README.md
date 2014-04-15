@@ -1,4 +1,4 @@
-# FlagbitCurrencyBundle [![Build Status](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle.svg?branch=master)](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle)
+# FlagbitCurrencyBundle [![Build Status](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle.svg?branch=master)](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5f19bcf4-a598-489f-baf3-9e4b99a02091/mini.png)](https://insight.sensiolabs.com/projects/5f19bcf4-a598-489f-baf3-9e4b99a02091)
 
 ## About
 
