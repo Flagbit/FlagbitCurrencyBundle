@@ -6,32 +6,54 @@ The FlagbitCurrencyBundle provides basic functions to display currency symbols a
 
 ## Configuration
 
-You can set your default currency:
+You can set your default currency. The bundle defaults to EUR. Currency code has to be UPPERCASE.
 
 ```yaml
 flagbit_currency:
-    default_currency: CHF
+    default_currency: EUR
 ```
 
-The bundle defaults to EUR.
-
 ## Services
+
+Fetch the global default currency.
 
 ```php
 $container->get('flagbit_currency')->getDefaultCurrency(); // EUR
 ```
 
-## Twig Functions
+Fetch the currency name. Actual output depends on your locale set.
 
-### currency_name
+```php
+$container->get('flagbit_currency')->getCurrencyName(); // Euro
+$container->get('flagbit_currency')->getCurrencyName('EUR'); // Euro
+$container->get('flagbit_currency')->getCurrencyName('USD'); // US Dollar
+```
+
+Fetch the symbol for the default currency or a given currency.
+
+```php
+$container->get('flagbit_currency')->getCurrencySymbol(); // €
+$container->get('flagbit_currency')->getCurrencySymbol('EUR); // €
+$container->get('flagbit_currency')->getCurrencySymbol('USD'); // $
+```
+
+## Twig
+
+### Functions
+
+#### currency_name
+
+Fetch the currency name. Actual output depends on your locale set.
 
 ```twig
 {{ currency_name() }} {# example output: Euro #}
 {{ currency_name('EUR') }} {# example output: Euro #}
-{{ currency_name('CHF') }} {# example output: Schweizer Franken #}
+{{ currency_name('USD') }} {# example output: US Dollar #}
 ```
 
-### curreny_symbol
+#### curreny_symbol
+
+Fetch the symbol for the default currency or a given currency.
 
 ```twig
 {{ currency_symbol() }} {# example output: € #}

@@ -59,7 +59,7 @@ class CurrencyTest extends \PHPUnit_Framework_TestCase
             ->with('EUR')
             ->will($this->returnValue('Euro'));
 
-        $this->assertEquals('Euro', $this->currency->getCurrencyName('EUR'));
+        $this->assertEquals('Euro', $this->currency->getCurrencyName());
     }
 
     public function testCurrencyName()

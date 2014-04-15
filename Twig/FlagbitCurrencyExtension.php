@@ -12,6 +12,9 @@ class FlagbitCurrencyExtension extends Twig_Extension
      */
     private $currency;
 
+    /**
+     * @param Currency $currency
+     */
     public function __construct(Currency $currency)
     {
         $this->currency = $currency;
@@ -27,6 +30,9 @@ class FlagbitCurrencyExtension extends Twig_Extension
         return 'quantum_currency';
     }
 
+    /**
+     * @return array
+     */
     public function getFunctions()
     {
         $currencyService = $this->currency;
