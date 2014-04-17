@@ -21,6 +21,9 @@
         "symfony/http-kernel": "~2.3",
         "symfony/intl": "~2.3"
     },
+    "require-dev": {
+        "twig/twig": "<2.0-dev"
+    },
     "autoload": {
         "psr-0": {
             "Flagbit\\Bundle\\CurrencyBundle": ""
