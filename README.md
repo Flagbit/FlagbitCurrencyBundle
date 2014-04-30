@@ -60,3 +60,11 @@ Fetch the symbol for the default currency or a given currency.
 {{ currency_symbol('CHF') }} {# example output: CHF #}
 {{ currency_symbol('EUR') }} {# example output: € #}
 ```
+
+### Globals
+
+The default currency code is available as variable.
+
+```twig
+{{ currency.default }} {# example output: EUR #}
+```

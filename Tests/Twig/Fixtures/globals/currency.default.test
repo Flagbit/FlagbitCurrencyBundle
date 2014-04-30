@@ -1,0 +1,8 @@
+--TEST--
+"currency.default" global
+--TEMPLATE--
+{{ currency.default }}
+--DATA--
+return array()
+--EXPECT--
+EUR

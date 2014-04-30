@@ -46,4 +46,16 @@ class FlagbitCurrencyExtension extends Twig_Extension
             }),
         );
     }
+
+    /**
+     * @return array
+     */
+    public function getGlobals()
+    {
+        return array(
+            'currency' => array(
+                'default' => $this->currency->getDefaultCurrency(),
+            ),
+        );
+    }
 }
