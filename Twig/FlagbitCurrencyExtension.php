@@ -27,7 +27,7 @@ class FlagbitCurrencyExtension extends Twig_Extension
      */
     public function getName()
     {
-        return 'quantum_currency';
+        return 'flagbit_currency';
     }
 
     /**
