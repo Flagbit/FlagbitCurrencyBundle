@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('default_currency')
                     ->info('ISO 4217 currency code')
                     ->validate()
-                        ->ifTrue(function($v) {
+                        ->ifTrue(function ($v) {
                             return 1 !== preg_match('/^[A-Z]{3}$/', $v);
                         })
                         ->thenInvalid('Invalid currency code "%s"')

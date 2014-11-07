@@ -59,6 +59,6 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-       $this->process($config);
+        $this->process($config);
     }
 }
