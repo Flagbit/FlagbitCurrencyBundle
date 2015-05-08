@@ -1,4 +1,6 @@
-# FlagbitCurrencyBundle [![Build Status](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle.svg?branch=master)](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/edbcef66-5dcf-41da-a222-d92814650c2a/mini.png)](https://insight.sensiolabs.com/projects/edbcef66-5dcf-41da-a222-d92814650c2a)
+# FlagbitCurrencyBundle
+
+[![Build Status](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle.svg?branch=master)](https://travis-ci.org/Flagbit/FlagbitCurrencyBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/edbcef66-5dcf-41da-a222-d92814650c2a/mini.png)](https://insight.sensiolabs.com/projects/edbcef66-5dcf-41da-a222-d92814650c2a) [![License](https://poser.pugx.org/flagbit/currency-bundle/license)](https://packagist.org/packages/flagbit/currency-bundle)
 
 ## About
 
