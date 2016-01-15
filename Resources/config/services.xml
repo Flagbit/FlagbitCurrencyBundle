@@ -10,8 +10,9 @@
     </parameters>
 
     <services>
-        <service id="flagbit_currency.intl_bundle" class="Symfony\Component\Intl\ResourceBundle\CurrencyBundleInterface"
-                 factory-class="Symfony\Component\Intl\Intl" factory-method="getCurrencyBundle" public="false"/>
+        <service id="flagbit_currency.intl_bundle" class="Symfony\Component\Intl\ResourceBundle\CurrencyBundleInterface">
+            <factory class="Symfony\Component\Intl\Intl" method="getCurrencyBundle"/>
+        </service>
 
         <service id="flagbit_currency" class="%flagbit_currency.class%">
             <argument type="service" id="flagbit_currency.intl_bundle"/>
