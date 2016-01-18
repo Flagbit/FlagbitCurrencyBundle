@@ -24,6 +24,18 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test Default Currency to prevent BC breaks
+     */
+    public function testProcessedDefaultCurrency()
+    {
+        $config = array(array());
+
+        $config = $this->process($config);
+
+        $this->assertEquals('EUR', $config['default_currency']);
+    }
+
+    /**
      * @dataProvider provideValidCurrency
      */
     public function testValidDefaultCurrency($currency)
