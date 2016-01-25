@@ -4,8 +4,9 @@ namespace Flagbit\Bundle\CurrencyBundle\Twig;
 
 use Flagbit\Bundle\CurrencyBundle\Service\Currency;
 use Twig_Extension;
+use Twig_Extension_GlobalsInterface;
 
-class FlagbitCurrencyExtension extends Twig_Extension
+class FlagbitCurrencyExtension extends Twig_Extension implements Twig_Extension_GlobalsInterface
 {
     /**
      * @var Currency
