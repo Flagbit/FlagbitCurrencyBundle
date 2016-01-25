@@ -2,10 +2,13 @@
 
 ## Unreleased
 
+## 2.0.0 - 2016-01-25
+
 ### Changed
 
 - Change visibility of ```flagbit_currency.twig``` service to private
 - Use new (symfony 2.6+) syntax for factories
+- Bump required twig version to use Twig_Extension_GlobalsInterface
 
 ### Removed
 
