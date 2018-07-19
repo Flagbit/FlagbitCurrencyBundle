@@ -1,14 +1,14 @@
 --TEST--
 "currency_symbol" function
 --TEMPLATE--
-{{ currency_symbol() == '€' ? 'OK' : 'KO' }}
-{{ currency_symbol('EUR') == '€' ? 'OK' : 'KO' }}
-{{ currency_symbol('USD') == '$' ? 'OK' : 'KO' }}
-{{ currency_symbol('CHF') == 'CHF' ? 'OK' : 'KO' }}
+{{ currency_symbol() }}
+{{ currency_symbol('EUR') }}
+{{ currency_symbol('USD') }}
+{{ currency_symbol('CHF') }}
 --DATA--
-return array()
+return []
 --EXPECT--
-OK
-OK
-OK
-OK
+€
+€
+$
+CHF

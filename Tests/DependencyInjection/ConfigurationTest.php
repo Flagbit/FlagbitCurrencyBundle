@@ -3,9 +3,10 @@
 namespace Flagbit\Bundle\CurrencyBundle\Tests;
 
 use Flagbit\Bundle\CurrencyBundle\DependencyInjection\Configuration;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 
-class ConfigurationTest extends \PHPUnit_Framework_TestCase
+class ConfigurationTest extends TestCase
 {
     protected function process($config)
     {
@@ -16,11 +17,11 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
     public function provideValidCurrency()
     {
-        return array(
-            array('EUR'),
-            array('USD'),
-            array('CHF'),
-        );
+        return [
+            ['EUR'],
+            ['USD'],
+            ['CHF'],
+        ];
     }
 
     /**
@@ -28,7 +29,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
      */
     public function testProcessedDefaultCurrency()
     {
-        $config = array(array());
+        $config = [[]];
 
         $config = $this->process($config);
 
@@ -40,11 +41,11 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidDefaultCurrency($currency)
     {
-        $config = array(
-            array(
+        $config = [
+            [
                 'default_currency' => $currency,
-            )
-        );
+            ]
+        ];
 
         $config = $this->process($config);
 
@@ -53,10 +54,10 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
     public function provideInvalidCurrency()
     {
-        return array(
-            array('foobar'),
-            array('eur'),
-        );
+        return [
+            ['foobar'],
+            ['eur'],
+        ];
     }
 
     /**
@@ -65,11 +66,11 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidDefaultCurrency($currency)
     {
-        $config = array(
-            array(
+        $config = [
+            [
                 'default_currency' => $currency,
-            )
-        );
+            ]
+        ];
 
         $this->process($config);
     }

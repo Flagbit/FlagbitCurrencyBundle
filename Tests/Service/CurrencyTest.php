@@ -3,9 +3,10 @@
 namespace Flagbit\Bundle\CurrencyBundle\Tests\Service;
 
 use Flagbit\Bundle\CurrencyBundle\Service\Currency;
+use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_MockObject_MockObject;
 
-class CurrencyTest extends \PHPUnit_Framework_TestCase
+class CurrencyTest extends TestCase
 {
     /**
      * @var PHPUnit_Framework_MockObject_MockObject

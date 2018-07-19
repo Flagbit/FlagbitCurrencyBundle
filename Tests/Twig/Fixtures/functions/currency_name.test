@@ -1,12 +1,12 @@
 --TEST--
 "currency_name" function
 --TEMPLATE--
-{{ currency_name() == 'Euro' ? 'OK' : 'KO' }}
-{{ currency_name('EUR') == 'Euro' ? 'OK' : 'KO' }}
-{{ currency_name('USD') == 'US Dollar' ? 'OK' : 'KO' }}
+{{ currency_name() }}
+{{ currency_name('EUR') }}
+{{ currency_name('USD') }}
 --DATA--
-return array()
+return []
 --EXPECT--
-OK
-OK
-OK
+Euro
+Euro
+US-Dollar

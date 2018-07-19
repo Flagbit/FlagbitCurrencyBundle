@@ -3,6 +3,6 @@
 --TEMPLATE--
 {{ currency.default }}
 --DATA--
-return array()
+return []
 --EXPECT--
 EUR
