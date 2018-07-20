@@ -19,9 +19,7 @@
             <argument />
         </service>
 
-        <service id="flagbit_currency" alias="Flagbit\Bundle\CurrencyBundle\Service\Currency" public="true">
-            <deprecated>Use class name to inject dependencies</deprecated>
-        </service>
+        <service id="flagbit_currency" alias="Flagbit\Bundle\CurrencyBundle\Service\Currency" public="true" />
     </services>
 
 </container>
