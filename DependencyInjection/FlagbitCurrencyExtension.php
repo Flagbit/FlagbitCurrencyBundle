@@ -10,12 +10,10 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class FlagbitCurrencyExtension extends Extension
 {
     /**
-     * Loads a specific configuration.
+     * @param array            $config
+     * @param ContainerBuilder $container
      *
-     * @param array $config An array of configuration values
-     * @param ContainerBuilder $container A ContainerBuilder instance
-     *
-     * @throws \InvalidArgumentException When provided tag is not defined in this extension
+     * @throws \Exception
      *
      * @api
      */
@@ -28,6 +26,6 @@ class FlagbitCurrencyExtension extends Extension
         $loader->load('services.xml');
 
         $container->findDefinition('flagbit_currency')
-            ->addArgument($config['default_currency']);
+            ->setArgument(1, $config['default_currency']);
     }
 }

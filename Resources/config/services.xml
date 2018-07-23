@@ -4,24 +4,22 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <parameters>
-        <parameter key="flagbit_currency.class">Flagbit\Bundle\CurrencyBundle\Service\Currency</parameter>
-        <parameter key="flagbit_currency.twig.class">Flagbit\Bundle\CurrencyBundle\Twig\FlagbitCurrencyExtension</parameter>
-    </parameters>
-
     <services>
-        <service id="flagbit_currency.intl_bundle" class="Symfony\Component\Intl\ResourceBundle\CurrencyBundleInterface">
+        <defaults public="false" autowire="true" autoconfigure="true" />
+
+        <prototype namespace="Flagbit\Bundle\CurrencyBundle\Service\" resource="../../Service/*" />
+        <prototype namespace="Flagbit\Bundle\CurrencyBundle\Twig\" resource="../../Twig/*" />
+
+        <service id="flagbit_currency.intl_bundle" class="Symfony\Component\Intl\ResourceBundle\CurrencyBundleInterface" public="true">
             <factory class="Symfony\Component\Intl\Intl" method="getCurrencyBundle"/>
         </service>
 
-        <service id="flagbit_currency" class="%flagbit_currency.class%">
+        <service id="Flagbit\Bundle\CurrencyBundle\Service\Currency">
             <argument type="service" id="flagbit_currency.intl_bundle"/>
+            <argument />
         </service>
 
-        <service id="flagbit_currency.twig" class="%flagbit_currency.twig.class%" public="false">
-            <argument type="service" id="flagbit_currency"/>
-            <tag name="twig.extension"/>
-        </service>
+        <service id="flagbit_currency" alias="Flagbit\Bundle\CurrencyBundle\Service\Currency" public="true" />
     </services>
 
 </container>

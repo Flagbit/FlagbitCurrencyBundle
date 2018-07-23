@@ -19,7 +19,7 @@ class Currency
     /**
      *
      * @param CurrencyBundleInterface $currencyBundle
-     * @param string $defaultCurrency ISO 4217 currency code
+     * @param string                  $defaultCurrency ISO 4217 currency code
      */
     public function __construct(CurrencyBundleInterface $currencyBundle, $defaultCurrency)
     {
@@ -29,6 +29,7 @@ class Currency
 
     /**
      * @param string $currency ISO 4217 currency code
+     *
      * @return string Name like "Euro" or "Schweizer Franken"
      */
     public function getCurrencyName($currency = null)
@@ -42,6 +43,7 @@ class Currency
 
     /**
      * @param string $currency ISO 4217 currency code
+     *
      * @return string Symbol like "€" or "CHF"
      */
     public function getCurrencySymbol($currency = null)

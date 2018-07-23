@@ -39,6 +39,9 @@ $container->get('flagbit_currency')->getCurrencySymbol('EUR'); // €
 $container->get('flagbit_currency')->getCurrencySymbol('USD'); // $
 ```
 
+**It is recommended, that you don't fetch a service directly from a container and use
+dependency injection instead.**
+
 ## Twig
 
 ### Functions

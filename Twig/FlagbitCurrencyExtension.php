@@ -38,14 +38,14 @@ class FlagbitCurrencyExtension extends Twig_Extension implements Twig_Extension_
     {
         $currencyService = $this->currency;
 
-        return array(
+        return [
             new \Twig_SimpleFunction('currency_name', function ($currency = null) use ($currencyService) {
                 return $currencyService->getCurrencyName($currency);
             }),
             new \Twig_SimpleFunction('currency_symbol', function ($currency = null) use ($currencyService) {
                 return $currencyService->getCurrencySymbol($currency);
             }),
-        );
+        ];
     }
 
     /**
@@ -53,10 +53,10 @@ class FlagbitCurrencyExtension extends Twig_Extension implements Twig_Extension_
      */
     public function getGlobals()
     {
-        return array(
-            'currency' => array(
+        return [
+            'currency' => [
                 'default' => $this->currency->getDefaultCurrency(),
-            ),
-        );
+            ],
+        ];
     }
 }

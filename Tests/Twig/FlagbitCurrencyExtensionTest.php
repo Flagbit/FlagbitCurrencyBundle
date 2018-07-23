@@ -11,13 +11,13 @@ class FlagbitCurrencyExtensionTest extends Twig_Test_IntegrationTestCase
 {
     public function getExtensions()
     {
-        return array(
+        return [
             new FlagbitCurrencyExtension(new Currency(Intl::getCurrencyBundle(), 'EUR')),
-        );
+        ];
     }
 
     public function getFixturesDir()
     {
-        return dirname(__FILE__) . '/Fixtures/';
+        return __DIR__ . '/Fixtures/';
     }
 }
