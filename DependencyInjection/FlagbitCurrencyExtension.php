@@ -26,6 +26,6 @@ class FlagbitCurrencyExtension extends Extension
         $loader->load('services.xml');
 
         $container->findDefinition('flagbit_currency')
-            ->addArgument($config['default_currency']);
+            ->setArgument(1, $config['default_currency']);
     }
 }
